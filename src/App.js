@@ -1,23 +1,21 @@
 import './App.css';
 import HelloWorld from './components/HelloWorld';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 
 function App() {
-  const name = 'Joao';
-  const newName = name.toUpperCase();
-
-  function sum(a, b) {
-    return a + b;
-  }
-
-  const url = 'https://via.placeholder.com/150';
-
+  const name = "Maria";
   return (
-    <div className="App">
-      <h2>Alterando o JSX</h2>      
-      <p>Olá, {newName}</p>
-      <p>Soma: {sum(2, 2)}</p>
-      <img src={url} alt="Minha imagem" />
-      <HelloWorld />
+    <div className="App">          
+      <SayMyName name="João" />
+      <SayMyName name="Jose" />
+      <SayMyName name={name} />
+      <Pessoa 
+        photo="https://via.placeholder.com/150"
+        name="Maria"
+        age="30"
+        job="Desenvolvedora"
+      />
     </div>
   );
 }
